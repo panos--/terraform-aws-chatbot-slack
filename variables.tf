@@ -12,6 +12,7 @@ variable "sns_topic_name" {
 variable "kms_key_id" {
   type = string
   description = "KMS key id to use with SNS topic."
+  default = ""
 }
 
 variable "chatbot_config_name" {
