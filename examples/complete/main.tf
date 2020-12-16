@@ -1,11 +1,3 @@
-provider "aws" {
-  version = "~> 2.66"
-}
-
-provider "template" {
-  version = "~> 2.1"
-}
-
 module "chatbot" {
   source = "../../"
 

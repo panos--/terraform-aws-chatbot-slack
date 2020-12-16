@@ -1,3 +1,5 @@
 .terraform
 *.tfstate*
+/examples/complete/.terraform.lock.hcl
+/examples/complete/.terraform-version
 /examples/complete/terraform.tfvars

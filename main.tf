@@ -1,5 +1,15 @@
 terraform {
-  required_version = ">= 0.12"
+  required_version = ">= 0.12.20"
+  required_providers {
+    aws = {
+      source = "hashicorp/aws"
+      version = ">= 2.0"
+    }
+    template = {
+      source = "hashicorp/template"
+      version = ">= 2.0"
+    }
+  }
 }
 
 data "aws_region" "current" {}
