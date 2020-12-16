@@ -32,13 +32,15 @@ See [example](examples/complete).
 
 | Name | Version |
 |------|---------|
-| terraform | >= 0.12 |
+| terraform | >= 0.12.20 |
+| aws | >= 2.0 |
+| template | >= 2.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| aws | n/a |
+| aws | >= 2.0 |
 
 ## Inputs
 
@@ -51,7 +53,7 @@ See [example](examples/complete).
 | chatbot\_role\_allow\_support\_access | Allow users to interact with AWS support from Slack. | `bool` | `false` | no |
 | chatbot\_role\_permissions\_boundary\_policy\_arn | IAM policy document to use as permissions boundary in the Chatbot IAM role.<br>Useful in combination with read only access to limit resources that can<br>be accessed from Slack. | `string` | `""` | no |
 | enabled | Whether to create resources or not. | `bool` | `true` | no |
-| kms\_key\_id | KMS key id to use with SNS topic. | `string` | "" | no |
+| kms\_key\_id | KMS key id to use with SNS topic. | `string` | `""` | no |
 | log\_level | Log level AWS Chatbot should use. Possible values are ERROR, INFO, NONE. | `string` | `"INFO"` | no |
 | slack\_channel\_id | ID of the Slack channel configure with AWS Chatbot.<br>Can be determined by right-clicking the channel in Slack and choosing<br>copy link. The channel ID is the last part of the copied URL. | `string` | n/a | yes |
 | slack\_workspace\_id | ID of the Slack workspace containing the channel to use with AWS Chatbot.<br>Can be found in the AWS Chatbot console. | `string` | n/a | yes |
@@ -64,3 +66,4 @@ See [example](examples/complete).
 | iam\_role\_arn | ARN of IAM role assigned to AWS Chatbot. |
 | iam\_role\_name | Name of IAM role assigned to AWS Chatbot. |
 | sns\_topic\_arn | ARN of SNS topic which AWS Chatbot is subscribed to. |
+
