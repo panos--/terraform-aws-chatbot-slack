@@ -44,6 +44,7 @@ data "aws_iam_policy_document" "sns_chatbot" {
       type = "Service"
       identifiers = [
         # FIXME: "billingconsole.amazonaws.com",
+        "codestar-notifications.amazonaws.com",
         "budgets.amazonaws.com",
         "cloudformation.amazonaws.com",
         "cloudwatch.amazonaws.com",
