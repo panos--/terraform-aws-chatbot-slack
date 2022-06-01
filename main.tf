@@ -54,6 +54,7 @@ data "aws_iam_policy_document" "sns_chatbot" {
         "codedeploy.${local.region}.amazonaws.com",
         "codepipeline.amazonaws.com",
         "codestar.amazonaws.com",
+        "costalerts.amazonaws.com",
         "events.amazonaws.com",
       ]
     }
