@@ -24,7 +24,7 @@ Implementation note: Since terraform does [not support](https://github.com/terra
 
 > NOTE: Before applying this module AWS Chatbot has to be manually
 > authorized to access the Slack workspace in question by performing
-> steps 1 to 4 of [Setting up AWS Chatbot with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/getting-started.html#slack-setup).
+> steps 1 to 5 of [Tutorial: Get started with Slack](https://docs.aws.amazon.com/chatbot/latest/adminguide/slack-setup.html).
 
 See [example](examples/complete).
 
