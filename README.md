@@ -4,7 +4,7 @@ Terraform module setting up Slack notifications from AWS using
 [AWS Chatbot](https://docs.aws.amazon.com/chatbot/index.html).
 
 This module creates a Slack channel configuration in AWS Chatbot,
-an SNS topic which Chatbot is subsribed to as well as IAM permissions
+an SNS topic which Chatbot is subscribed to as well as IAM permissions
 required for supported services to publish to the SNS topic.
 
 See [Using AWS Chatbot with other AWS services](https://docs.aws.amazon.com/chatbot/latest/adminguide/related-services.html)
