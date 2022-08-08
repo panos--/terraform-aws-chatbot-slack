@@ -62,7 +62,7 @@ data "aws_iam_policy_document" "sns_chatbot" {
 resource "aws_cloudformation_stack" "slack_channel_config" {
   count = var.enabled ? 1 : 0
 
-  name = "chatbot-slack-cheannel-config-${var.chatbot_config_name}"
+  name = "chatbot-slack-channel-config-${var.chatbot_config_name}"
   template_body = jsonencode(yamldecode(templatefile("${path.module}/cfn-chatbot-slack.yaml.tpl", {
     config_name        = var.chatbot_config_name
     iam_role_arn       = aws_iam_role.chatbot[0].arn
