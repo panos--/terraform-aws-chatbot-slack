@@ -39,7 +39,6 @@ data "aws_iam_policy_document" "sns_chatbot" {
     principals {
       type = "Service"
       identifiers = [
-        # FIXME: "billingconsole.amazonaws.com",
         "codestar-notifications.amazonaws.com",
         "budgets.amazonaws.com",
         "cloudformation.amazonaws.com",
@@ -52,7 +51,14 @@ data "aws_iam_policy_document" "sns_chatbot" {
         "codestar.amazonaws.com",
         "costalerts.amazonaws.com",
         "events.amazonaws.com",
+        "events.rds.amazonaws.com",
       ]
+    }
+
+    condition {
+      test     = "StringEquals"
+      variable = "aws:SourceAccount"
+      values   = [local.account_id]
     }
   }
 }
